@@ -1,0 +1,6 @@
+{
+  "name": "In Kava - Printing Portfolio & CMS",
+  "description": "A high-end, responsive portfolio website and administration system (CMS) for a modern industrial printing factory. Fully edit content, services, banners, and logos on the fly.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

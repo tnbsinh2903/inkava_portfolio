@@ -1,0 +1,542 @@
+{
+  "logo": {
+    "type": "text",
+    "text": "INKAVA",
+    "image": ""
+  },
+  "settings": {
+    "companyName": "Nhà Máy In Ấn & Bao Bì Hộp Giấy Cao Cấp In Kava",
+    "slogan": "Kiệt Tác Bao Bì - Nâng Tầm Thương Hiệu",
+    "address": "Văn phòng & Nhà xưởng: 235/4 Lê Văn Thọ, Phường 9, Gò Vấp, TP. Hồ Chí Minh",
+    "email": "kinhdoanh@inkava.vn",
+    "hotline": "0963.224.084",
+    "facebook": "https://facebook.com/inkava.vn",
+    "youtube": "https://youtube.com/inkava",
+    "tiktok": "https://tiktok.com/@inkava",
+    "zalo": "https://zalo.me/0963224084",
+    "instagram": "https://instagram.com/inkava",
+    "linkedin": "https://linkedin.com/company/inkava",
+    "showFacebook": true,
+    "showYoutube": true,
+    "showTiktok": true,
+    "showZalo": true,
+    "showInstagram": true,
+    "showLinkedin": false,
+    "googleMaps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.925055375495!2d106.6563143!3d10.8166702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175291b5b5fcb9d%3A0xc3f58a36fa5b66d!2zR8STIFbhuqVwLCBIb8G6gCBOaMahbg!5e0!3m2!1svi!2s!4v1626400000000!5m2!1svi!2s",
+    "footer": "© 2026 Công Ty TNHH In Kava Việt Nam. Bảo lưu mọi quyền.",
+    "seo": {
+      "title": "In Kava - Nhà Máy Sản Xuất Bao Bì & Hộp Giấy Cứng Cao Cấp",
+      "description": "In Kava chuyên sản xuất hộp cứng cao cấp, hộp quà tặng luxury, túi giấy, bao bì offset tinh xảo với tiến độ vượt trội và công nghệ in G7 hiện đại.",
+      "keywords": "in kava, inkava, in hộp cứng cao cấp, in hộp giấy, in túi giấy, xưởng in hộp quà tặng",
+      "ogImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+      "favicon": ""
+    }
+  },
+  "banners": [
+    {
+      "id": "b1",
+      "title": "WHEN IT COMES TO APPAREL DECORATION, WE  KNOW HOW TO DELIVER.",
+      "description": "",
+      "buttonText": "",
+      "buttonLink": "",
+      "secondaryButtonText": "",
+      "secondaryButtonLink": "",
+      "image": "/uploads/e90760-855f1552af8d4b588e4eb13fe-1784277751373.png",
+      "isVisible": true,
+      "order": 1
+    },
+    {
+      "id": "b2",
+      "title": "HỘP CỨNG QUÀ TẶNG & LUXURY PACKAGING",
+      "description": "Gia công bồi carton lạnh, bế âm dương, nắp nam châm hít, ép kim phủ UV sang trọng. Sự lựa chọn hoàn hảo tôn vinh giá trị Yến sào, Đông trùng, Mỹ phẩm, Trang sức quý phái.",
+      "buttonText": "Nhận Mẫu Thiết Kế",
+      "buttonLink": "#contact",
+      "secondaryButtonText": "Xem Năng Lực Xưởng",
+      "secondaryButtonLink": "#about",
+      "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1600&q=80",
+      "isVisible": true,
+      "order": 2
+    },
+    {
+      "id": "b3",
+      "title": "THIẾT KẾ ĐỘC QUYỀN - IN MẪU MIỄN PHÍ",
+      "description": "Đội ngũ chuyên viên mỹ thuật sáng tạo, thiết kế Marquette 3D độc bản và hỗ trợ in mẫu thử màu sắc chất liệu hoàn toàn miễn phí trước khi tiến hành sản xuất hàng loạt.",
+      "buttonText": "Nhận Ưu Đãi In Ấn",
+      "buttonLink": "#contact",
+      "secondaryButtonText": "Thư Viện Thực Tế",
+      "secondaryButtonLink": "#gallery",
+      "image": "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1600&q=80",
+      "isVisible": true,
+      "order": 3
+    }
+  ],
+  "services": [
+    {
+      "id": "s2",
+      "name": "SILK-SCREEN PRINTING",
+      "description": "The classic take on garment decoration with special attention to what works with your fabric, graphic, and style, executed by a variety of print techniques.",
+      "descriptionTitle": "The classic take on garment decoration with special attention to what works with your fabric, graphic, and style, executed by a variety of print techniques.",
+      "details": [
+        "Suitable for a wide range of apparel, including childrenswear, sportswear, intimate wear, and other textile applications.",
+        "Flexible production volumes, supporting both small runs and large-scale orders per graphic.",
+        "Advanced screen printing with precise multi-color registration, capable of handling complex, high color-count artworks.",
+        "Multiple printing techniques, including water-based, silicone, metallic, high-density, puff, glow-in-the-dark, glitter/shimmer, foil, photochromic, photorealistic, reflective, clear gel, and other advanced special-effect applications.",
+        "High quality inks, non-toxic, phthalate-free, and selected for durability and color stability.",
+        "OEKO-TEX® Standard 100 certified inks, ensuring safety and compliance with international textile standards.*"
+      ],
+      "icon": "Award",
+      "image": "/uploads/14.hvn.49620-extension1-en-page-0001-1784349805799.jpg",
+      "images": [],
+      "isVisible": true,
+      "order": 2,
+      "certificates": [
+        {
+          "name": "Chứng chỉ nguồn gốc gỗ FSC® CoC",
+          "fileUrl": "/uploads/14.hvn.49620-extension1-en-1784349819932.pdf"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "name": "FLEXOGRAPHY DIGITAL",
+      "description": "Add a professional retail finish to your garments.",
+      "descriptionTitle": "Add a professional retail finish to your garments.",
+      "details": [
+        "Suitable for clothing labels and stickers, applied across a wide range of materials and substrates.",
+        "Flexible production volumes, scalable from smaller runs to high-volume orders, depending on design and production requirements.",
+        "Layout support and technical consultation available for large-volume or repeat orders.",
+        "High-quality, non-toxic materials, selected for durability and compliance.",
+        "OEKO-TEX® Standard 100 certified, ensuring safety and suitability for textile applications.*"
+      ],
+      "icon": "Award",
+      "image": "/uploads/14.hvn.49620-extension1-en--1--page-0001-1784357335001.jpg",
+      "isVisible": true,
+      "order": 3,
+      "images": [
+        "/uploads/23.hvn.48935-extension1-en-page-0001-1784357345986.jpg"
+      ],
+      "certificates": [
+        {
+          "name": "abc",
+          "fileUrl": "/uploads/14.hvn.49620-extension1-en-1784357358682.pdf"
+        },
+        {
+          "name": "abcd",
+          "fileUrl": "/uploads/23.hvn.48935-extension1-en-1784357365990.pdf"
+        }
+      ]
+    },
+    {
+      "id": "s_1784357495063",
+      "name": "EMBROIDERY",
+      "description": "A refined expression of texture and detail, combining craftsmanship with automated precision.",
+      "icon": "Award",
+      "image": "/uploads/inkava-embroidery-edited-edited-1784357491207.jpg",
+      "isVisible": true,
+      "order": 4
+    },
+    {
+      "id": "s_1784357557528",
+      "name": "CUSTOM GRAPHIC ​DESIGN CONSULTATION",
+      "description": "A dedicated in-house design team supporting your ideas from concept to production-ready artwork.",
+      "icon": "Award",
+      "image": "",
+      "isVisible": true,
+      "order": 5,
+      "descriptionTitle": "A dedicated in-house design team supporting your ideas from concept to production-ready artwork.",
+      "details": [
+        "Custom apparel graphic development, tailored for printing and embroidery processes.",
+        "Packaging and label design, aligned with material, technique, and retail requirements.",
+        "Promotional and branding materials, developed with production feasibility in mind."
+      ],
+      "images": [],
+      "certificates": []
+    }
+  ],
+  "about": {
+    "title": "Nhà Máy In Ấn & Bao Bì In Kava",
+    "description": "Khởi nguồn từ khao khát nâng tầm giá trị thương hiệu Việt thông qua những bao bì tinh xảo, In Kava (Inkava.vn) đã vươn mình trở thành biểu tượng hàng đầu trong lĩnh vực sản xuất hộp cứng và bao bì cao cấp.\n\nChúng tôi sở hữu tổ hợp nhà xưởng tự động hóa quy mô lớn, được trang bị hệ thống máy in Offset Heidelberg Speedmaster thế hệ mới nhất của Đức kết hợp với quy chuẩn kiểm màu G7 chuẩn xác tuyệt đối. Mỗi sản phẩm xuất xưởng là kết tinh của quy trình gia công tỉ mỉ, kỹ thuật bồi dán bế hộp thủy lực chính xác từng milimet và sự tận tụy của đội ngũ kỹ sư hơn 15 năm kinh nghiệm. Với phương châm 'Kiệt tác bao bì - Nâng tầm thương hiệu', In Kava cam kết đồng hành cùng các nhãn hàng tạo nên sự bứt phá vượt trội về diện mạo.",
+    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
+    "stats": {
+      "foundationYear": 2012,
+      "area": 8500,
+      "employees": 250,
+      "capacity": 15
+    }
+  },
+  "brands": [
+    {
+      "id": "br1",
+      "name": "Nike",
+      "logo": "preset:nike",
+      "isVisible": true,
+      "order": 1
+    },
+    {
+      "id": "br2",
+      "name": "Jordan",
+      "logo": "preset:jordan",
+      "isVisible": true,
+      "order": 2
+    },
+    {
+      "id": "br3",
+      "name": "Lacoste",
+      "logo": "preset:lacoste",
+      "isVisible": true,
+      "order": 3
+    },
+    {
+      "id": "br4",
+      "name": "Puma",
+      "logo": "preset:puma",
+      "isVisible": true,
+      "order": 4
+    },
+    {
+      "id": "br5",
+      "name": "Victoria's Secret",
+      "logo": "preset:vs",
+      "isVisible": true,
+      "order": 5
+    },
+    {
+      "id": "br6",
+      "name": "Emporio Armani EA7",
+      "logo": "preset:ea7",
+      "isVisible": true,
+      "order": 6
+    },
+    {
+      "id": "br7",
+      "name": "Guess",
+      "logo": "preset:guess",
+      "isVisible": true,
+      "order": 7
+    },
+    {
+      "id": "br8",
+      "name": "Arena",
+      "logo": "preset:arena",
+      "isVisible": true,
+      "order": 8
+    },
+    {
+      "id": "br9",
+      "name": "Oakley",
+      "logo": "preset:oakley",
+      "isVisible": true,
+      "order": 9
+    },
+    {
+      "id": "br10",
+      "name": "Champion",
+      "logo": "preset:champion",
+      "isVisible": true,
+      "order": 10
+    },
+    {
+      "id": "br11",
+      "name": "Wed'ze",
+      "logo": "preset:wedze",
+      "isVisible": true,
+      "order": 11
+    },
+    {
+      "id": "br12",
+      "name": "Fila",
+      "logo": "preset:fila",
+      "isVisible": true,
+      "order": 12
+    },
+    {
+      "id": "br13",
+      "name": "Columbia",
+      "logo": "preset:columbia",
+      "isVisible": true,
+      "order": 13
+    },
+    {
+      "id": "br14",
+      "name": "Petit Bateau",
+      "logo": "preset:petitbateau",
+      "isVisible": true,
+      "order": 14
+    },
+    {
+      "id": "br15",
+      "name": "Hurley",
+      "logo": "preset:hurley",
+      "isVisible": true,
+      "order": 15
+    },
+    {
+      "id": "br16",
+      "name": "Quechua",
+      "logo": "preset:quechua",
+      "isVisible": true,
+      "order": 16
+    },
+    {
+      "id": "br17",
+      "name": "Olaian",
+      "logo": "preset:olaian",
+      "isVisible": true,
+      "order": 17
+    },
+    {
+      "id": "br18",
+      "name": "Nabaiji",
+      "logo": "preset:nabaiji",
+      "isVisible": true,
+      "order": 18
+    },
+    {
+      "id": "br19",
+      "name": "Converse",
+      "logo": "preset:converse",
+      "isVisible": true,
+      "order": 19
+    },
+    {
+      "id": "br20",
+      "name": "Levi's",
+      "logo": "preset:levis",
+      "isVisible": true,
+      "order": 20
+    },
+    {
+      "id": "br21",
+      "name": "Kalenji",
+      "logo": "preset:kalenji",
+      "isVisible": true,
+      "order": 21
+    },
+    {
+      "id": "br22",
+      "name": "Domyos",
+      "logo": "preset:domyos",
+      "isVisible": true,
+      "order": 22
+    },
+    {
+      "id": "br23",
+      "name": "HBi",
+      "logo": "preset:hbi",
+      "isVisible": true,
+      "order": 23
+    },
+    {
+      "id": "br24",
+      "name": "Well",
+      "logo": "preset:well",
+      "isVisible": true,
+      "order": 24
+    },
+    {
+      "id": "br25",
+      "name": "DIM",
+      "logo": "preset:dim",
+      "isVisible": true,
+      "order": 25
+    },
+    {
+      "id": "br26",
+      "name": "Camaïeu",
+      "logo": "preset:camaieu",
+      "isVisible": true,
+      "order": 26
+    },
+    {
+      "id": "br27",
+      "name": "Adore Me",
+      "logo": "preset:adoreme",
+      "isVisible": true,
+      "order": 27
+    },
+    {
+      "id": "br28",
+      "name": "Carrefour",
+      "logo": "preset:carrefour",
+      "isVisible": true,
+      "order": 28
+    },
+    {
+      "id": "br29",
+      "name": "Walmart",
+      "logo": "preset:walmart",
+      "isVisible": true,
+      "order": 29
+    },
+    {
+      "id": "br30",
+      "name": "Amazon",
+      "logo": "/uploads/dbb43c3c7495511f1849310f8bceb3ac-1784278812830.png",
+      "isVisible": true,
+      "order": 30
+    }
+  ],
+  "gallery": [
+    {
+      "id": "g1",
+      "title": "Dây chuyền in Offset Heidelberg 6 màu",
+      "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "g2",
+      "title": "Máy bế và gia công hộp cứng tự động",
+      "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "g3",
+      "title": "Kho nguyên liệu giấy cuộn công nghiệp",
+      "image": "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "g4",
+      "title": "Kiểm tra chất lượng thành phẩm sau cán màng",
+      "image": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "g5",
+      "title": "Khu vực gia công dán hộp tự động",
+      "image": "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "g6",
+      "title": "Lô hàng Catalogue xuất khẩu Nhật Bản",
+      "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "c_1",
+      "fullName": "Nguyễn Văn Hùng",
+      "phone": "0912345678",
+      "email": "hung.nguyen@gmail.com",
+      "message": "Tôi muốn đặt in 10,000 hộp giấy đựng mỹ phẩm, vui lòng gửi báo giá in offset phủ UV.",
+      "createdAt": "2026-07-15T10:00:00.000Z",
+      "isProcessed": false
+    },
+    {
+      "id": "c_2",
+      "fullName": "Trần Thị Lan",
+      "phone": "0987654321",
+      "email": "lan.tran@vietnamfoods.vn",
+      "message": "Cần tư vấn thiết kế và in túi giấy Kraft cho hệ thống cửa hàng thực phẩm sạch.",
+      "createdAt": "2026-07-14T14:30:00.000Z",
+      "isProcessed": true
+    }
+  ],
+  "aboutFactory": {
+    "title": "OUR FACTORY AT A GLANCE",
+    "description": "Inkava factory operates within a 10,000 m² integrated facility, designed for both efficiency and flexibility.\n\nOur production lines include fully automated screen-printing systems and high-performance multi-head embroidery machines, supported by a professional sampling and quality control department.\n\nEvery detail of our process — from color mixing to stitching precision — is monitored to meet global manufacturing standards, ensuring reliability and repeatability at scale.",
+    "images": [
+      "/uploads/e90760-43d15f1a8f4f40b0babc8da1d-1784359847649.jpg",
+      "/uploads/e90760-14a2e7f1c27443b1a21f6302d-1784359850432.jpg",
+      "/uploads/e90760-3a242fc13d284c8fb4612fe30-1784359853276.jpg",
+      "/uploads/e90760-a827e88dda8140ba953d02415-1784359858331.png",
+      "/uploads/e90760-689fc054981443b5a5cfbc8b8-1784359862814.png",
+      "/uploads/e90760-1f540dfb051d40bdab4704c90-1784359875953.png",
+      "/uploads/e90760-29f90ee06f5e45cfb392f3abb-1784359879565.png"
+    ],
+    "imageRotationInterval": 3,
+    "stats": {
+      "foundationYear": 2012,
+      "area": 10000,
+      "employees": 250,
+      "capacity": 15,
+      "experienceYears": 14,
+      "globalBrands": 50,
+      "projectsDone": 500
+    }
+  },
+  "aboutUs": {
+    "title": "Giới Thiệu Doanh Nghiệp In Kava",
+    "description": "In Kava tự hào là đối tác thiết kế và sản xuất bao bì, hộp giấy cao cấp cho hàng trăm thương hiệu lớn nhỏ trên toàn quốc. Chúng tôi cung cấp các giải pháp bao bì từ thiết kế mẫu 3D miễn phí cho đến quy trình in offset chất lượng cao khép kín, cam kết đáp ứng mọi tiêu chuẩn chất lượng khắt khe nhất của thị trường.",
+    "videoUrl": "/uploads/fsave.com-facebook-built-for-what-s-next-a-new-space-for-be-media-1025459153153493-001-1080p-1784367013478.mp4"
+  },
+  "team": [
+    {
+      "id": "tm1",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80",
+      "fullName": "Nguyễn Thị Mai",
+      "email": "mai.nguyen@inkava.vn",
+      "department": "Kinh Doanh",
+      "position": "Trưởng phòng Kinh doanh",
+      "order": 1
+    },
+    {
+      "id": "tm2",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
+      "fullName": "Trần Anh Tuấn",
+      "email": "tuan.tran@inkava.vn",
+      "department": "Kỹ Thuật In",
+      "position": "Kỹ sư Trưởng Heidelberg",
+      "order": 2
+    },
+    {
+      "id": "tm3",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80",
+      "fullName": "Lê Minh Thư",
+      "email": "thu.le@inkava.vn",
+      "department": "Thiết Kế Mỹ Thuật",
+      "position": "Creative Director",
+      "order": 3
+    }
+  ],
+  "work": [
+    {
+      "id": "w1",
+      "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80",
+      "customerName": "Toyota Việt Nam",
+      "application": "Hộp phụ tùng & Sổ hướng dẫn",
+      "order": 1
+    },
+    {
+      "id": "w2",
+      "image": "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=600&q=80",
+      "customerName": "Vinamilk",
+      "application": "Hộp quà tặng sữa bột cao cấp",
+      "order": 4
+    },
+    {
+      "id": "w3",
+      "image": "/uploads/generated-image-july-03--2026---8-58am-1784273911751.jpg",
+      "customerName": "Samsung Vina",
+      "application": "Hộp điện thoại Galaxy cao cấp",
+      "order": 2,
+      "stylePreset": "default"
+    },
+    {
+      "id": "w4",
+      "image": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=600&q=80",
+      "customerName": "Nestlé Việt Nam",
+      "application": "Bao bì hộp bánh Tết sang trọng",
+      "order": 3
+    },
+    {
+      "id": "w_1784273900930",
+      "image": "/uploads/hinh-nen-vo-tri-04-1784273894721.jpg",
+      "customerName": "qwqqw",
+      "application": "dqweqeq",
+      "stylePreset": "default",
+      "order": 5
+    },
+    {
+      "id": "w_1784273934610",
+      "image": "/uploads/hinh-nen-vo-tri-02-1784273933460.jpg",
+      "customerName": "qưeqe",
+      "application": "eqweqwe",
+      "stylePreset": "default",
+      "order": 6
+    }
+  ],
+  "sectionBgColors": {
+    "aboutFactory": "#ffffff",
+    "aboutUs": "#f8fafc",
+    "work": "#ffffff",
+    "team": "#f8fafc",
+    "contact": "#f3e7e7"
+  }
+}
