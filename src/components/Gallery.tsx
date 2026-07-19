@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { GalleryItem } from "../types";
-import { X, ZoomIn, ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
+import {
+  X,
+  ZoomIn,
+  ChevronLeft,
+  ChevronRight,
+  Image as ImageIcon,
+} from "lucide-react";
 
 interface GalleryProps {
   items: GalleryItem[];
@@ -15,30 +21,51 @@ export const Gallery: React.FC<GalleryProps> = ({ items }) => {
   const handlePrev = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (activePhotoIndex !== null) {
-      setActivePhotoIndex((prev) => (prev === null ? 0 : (prev - 1 + items.length) % items.length));
+      setActivePhotoIndex((prev) =>
+        prev === null ? 0 : (prev - 1 + items.length) % items.length,
+      );
     }
   };
 
   const handleNext = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (activePhotoIndex !== null) {
-      setActivePhotoIndex((prev) => (prev === null ? 0 : (prev + 1) % items.length));
+      setActivePhotoIndex((prev) =>
+        prev === null ? 0 : (prev + 1) % items.length,
+      );
     }
   };
 
   // Helper to dynamically get realistic categories for the gallery images
   const getCategoryForGalleryItem = (title: string) => {
     const text = title.toLowerCase();
-    if (text.includes("máy in") || text.includes("heidelberg") || text.includes("in 6 màu")) {
+    if (
+      text.includes("máy in") ||
+      text.includes("heidelberg") ||
+      text.includes("in 6 màu")
+    ) {
       return "HỆ THỐNG MÁY IN";
     }
-    if (text.includes("bế") || text.includes("hộp cứng") || text.includes("dán hộp") || text.includes("gia công")) {
+    if (
+      text.includes("bế") ||
+      text.includes("hộp cứng") ||
+      text.includes("dán hộp") ||
+      text.includes("gia công")
+    ) {
       return "DÂY CHUYỀN GIA CÔNG";
     }
-    if (text.includes("kho") || text.includes("nguyên liệu") || text.includes("giấy")) {
+    if (
+      text.includes("kho") ||
+      text.includes("nguyên liệu") ||
+      text.includes("giấy")
+    ) {
       return "KHO VẬT TƯ CHUẨN FSC";
     }
-    if (text.includes("kiểm tra") || text.includes("chất lượng") || text.includes("thành phẩm")) {
+    if (
+      text.includes("kiểm tra") ||
+      text.includes("chất lượng") ||
+      text.includes("thành phẩm")
+    ) {
       return "KIỂM ĐỊNH CHẤT LƯỢNG";
     }
     return "SẢN PHẨM HOÀN THIỆN";
@@ -47,20 +74,22 @@ export const Gallery: React.FC<GalleryProps> = ({ items }) => {
   return (
     <section id="gallery" className="py-24 bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 mb-3">
+          {/* <div className="inline-flex items-center gap-2 mb-3">
             <span className="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse" />
             <span className="text-xs font-black tracking-[0.25em] text-amber-500 uppercase font-mono">
               HÌNH ẢNH NHÀ XƯỞNG
             </span>
-          </div>
+          </div> */}
           <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight uppercase">
-            HÌNH ẢNH HOẠT ĐỘNG THỰC TẾ
+            Production Images
           </h2>
           <p className="mt-4 text-sm sm:text-base text-gray-500 font-sans font-light leading-relaxed">
-            Quy trình vận hành chuyên nghiệp từ khâu chuẩn bị nguyên liệu giấy, in ấn bằng máy offset công suất cao cho đến khâu gia công thủ công bồi bế hộp tinh xảo.
+            The professional operating process includes everything from
+            preparing the paper materials, printing with high-capacity offset
+            machines, to the meticulous handcrafted finishing and fine-cutting
+            of the boxes.
           </p>
         </div>
 
@@ -84,7 +113,7 @@ export const Gallery: React.FC<GalleryProps> = ({ items }) => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
-                
+
                 {/* Visual Category Badge on Card overlay */}
                 <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur text-slate-900 text-[9px] font-black tracking-widest px-3 py-1 rounded-full border border-slate-200/50 shadow-sm transition-transform duration-500 group-hover:translate-y-0.5">
                   {category}
@@ -123,10 +152,11 @@ export const Gallery: React.FC<GalleryProps> = ({ items }) => {
                 <span>THƯ VIỆN ẢNH</span>
                 <span>•</span>
                 <span className="text-white">
-                  {(activePhotoIndex + 1).toString().padStart(2, "0")} / {items.length.toString().padStart(2, "0")}
+                  {(activePhotoIndex + 1).toString().padStart(2, "0")} /{" "}
+                  {items.length.toString().padStart(2, "0")}
                 </span>
               </div>
-              
+
               {/* Close Button */}
               <button
                 onClick={() => setActivePhotoIndex(null)}

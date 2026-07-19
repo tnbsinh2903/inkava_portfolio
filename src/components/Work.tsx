@@ -6,8 +6,8 @@ import { ZoomIn, X, ChevronLeft, ChevronRight } from "lucide-react";
 // DotMatrix decor mirroring the exact technical dots grid in the uploaded photo
 const DotMatrix: React.FC<{ dotColor: string }> = ({ dotColor }) => {
   return (
-    <div 
-      className="flex flex-col gap-0.5 select-none font-black text-[8px] tracking-[0.2em] opacity-50 leading-none shrink-0 items-center justify-center" 
+    <div
+      className="flex flex-col gap-0.5 select-none font-black text-[8px] tracking-[0.2em] opacity-50 leading-none shrink-0 items-center justify-center"
       style={{ color: dotColor }}
     >
       <div>• • • • • •</div>
@@ -31,71 +31,71 @@ const PRESETS: Record<string, StyleConfig> = {
     text: "text-slate-950",
     dotColor: "rgba(15, 23, 42, 0.35)",
     label: "waterbased.",
-    color: "#BCE33A"
+    color: "#BCE33A",
   },
   rubber: {
     bg: "bg-[#5F65B6]",
     text: "text-white",
     dotColor: "rgba(255, 255, 255, 0.35)",
     label: "rubber.",
-    color: "#818CF8"
+    color: "#818CF8",
   },
   glitter: {
     bg: "bg-[#E6DE1C]",
     text: "text-slate-950",
     dotColor: "rgba(15, 23, 42, 0.35)",
     label: "glitter.shimmer.",
-    color: "#FACC15"
+    color: "#FACC15",
   },
   glow: {
     bg: "bg-[#484A6A]",
     text: "text-cyan-300",
     dotColor: "rgba(34, 211, 238, 0.35)",
     label: "glow in the dark.",
-    color: "#22D3EE"
+    color: "#22D3EE",
   },
   split_fountain: {
     bg: "bg-[#00ACD4]",
     text: "text-white",
     dotColor: "rgba(255, 255, 255, 0.35)",
     label: "split fountain.",
-    color: "#06B6D4"
+    color: "#06B6D4",
   },
   puff: {
     bg: "bg-[#F29424]",
     text: "text-slate-950",
     dotColor: "rgba(15, 23, 42, 0.35)",
     label: "puff.",
-    color: "#FB923C"
+    color: "#FB923C",
   },
   metallic: {
     bg: "bg-[#E3294E]",
     text: "text-white",
     dotColor: "rgba(255, 255, 255, 0.35)",
     label: "metallic.",
-    color: "#F87171"
+    color: "#F87171",
   },
   high_density: {
     bg: "bg-[#504099]",
     text: "text-white",
     dotColor: "rgba(251, 191, 36, 0.35)",
     label: "high density.",
-    color: "#A78BFA"
+    color: "#A78BFA",
   },
   plastisol: {
     bg: "bg-[#E1701A]",
     text: "text-white",
     dotColor: "rgba(255, 255, 255, 0.35)",
     label: "plastisol.",
-    color: "#F97316"
+    color: "#F97316",
   },
   photo_realistic: {
     bg: "bg-[#5C6BC0]",
     text: "text-white",
     dotColor: "rgba(255, 255, 255, 0.35)",
     label: "photo-realistic.",
-    color: "#6366F1"
-  }
+    color: "#6366F1",
+  },
 };
 
 const PRESET_KEYS = Object.keys(PRESETS);
@@ -123,25 +123,26 @@ export const Work: React.FC<WorkProps> = ({ work = [], bgColor }) => {
   };
 
   return (
-    <section 
-      id="work" 
+    <section
+      id="work"
       className="w-full pt-20 pb-0 scroll-mt-20 overflow-hidden transition-colors duration-500 bg-[#EDECE9]"
     >
       {/* Section Header */}
       <div className="w-full px-4 sm:px-6 lg:px-12 max-w-[1800px] mx-auto mb-16">
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 mb-3">
+          {/* <div className="inline-flex items-center gap-2 mb-3">
             <span className="h-1.5 w-1.5 rounded-full bg-[#11422E] animate-pulse" />
             <span className="text-xs font-black tracking-[0.25em] text-[#11422E] uppercase font-mono">
               WORK ARCHIVE
             </span>
-          </div>
+          </div> */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight uppercase leading-none">
-            Dự Án Đã Thực Hiện
+            PROJECTS{" "}
           </h2>
-          <p className="text-sm sm:text-base text-gray-500 font-normal mt-4 leading-relaxed">
-            Danh sách các sản phẩm in ấn và bao bì cao cấp với đa dạng các kỹ thuật in ấn hiện đại nhất hiện nay.
-          </p>
+          {/* <p className="text-sm sm:text-base text-gray-500 font-normal mt-4 leading-relaxed">
+            Danh sách các sản phẩm in ấn và bao bì cao cấp với đa dạng các kỹ
+            thuật in ấn hiện đại nhất hiện nay.
+          </p> */}
         </div>
       </div>
 
@@ -149,9 +150,10 @@ export const Work: React.FC<WorkProps> = ({ work = [], bgColor }) => {
       <div className="bg-white p-[3px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[3px] select-none w-full max-w-none">
         {work.map((item, idx) => {
           // Determine active preset (fall back to repeating keys if 'default' or undefined)
-          const chosenPreset = item.stylePreset && item.stylePreset !== "default"
-            ? item.stylePreset
-            : PRESET_KEYS[idx % PRESET_KEYS.length];
+          const chosenPreset =
+            item.stylePreset && item.stylePreset !== "default"
+              ? item.stylePreset
+              : PRESET_KEYS[idx % PRESET_KEYS.length];
 
           const preset = PRESETS[chosenPreset] || PRESETS.waterbased;
 
@@ -174,13 +176,15 @@ export const Work: React.FC<WorkProps> = ({ work = [], bgColor }) => {
               />
 
               {/* 2. Seamless Centered Glassmorphism Overlay - Reveals on Hover with light tint to keep the photo clearly visible */}
-              <div 
-                className="absolute inset-0 w-full h-full bg-slate-950/45 backdrop-blur-[3px] opacity-0 group-hover:opacity-100 transition-all duration-400 ease-in-out z-10 flex flex-col items-center justify-center text-center p-6 text-white"
-              >
+              <div className="absolute inset-0 w-full h-full bg-slate-950/45 backdrop-blur-[3px] opacity-0 group-hover:opacity-100 transition-all duration-400 ease-in-out z-10 flex flex-col items-center justify-center text-center p-6 text-white">
                 {/* Styled Technical Badge Tag */}
-                <span 
+                <span
                   className="text-[9px] font-black uppercase tracking-[0.25em] px-3 py-1 rounded-full border mb-4 shadow-sm backdrop-blur-sm"
-                  style={{ borderColor: preset.color, color: preset.color, backgroundColor: "rgba(15, 23, 42, 0.4)" }}
+                  style={{
+                    borderColor: preset.color,
+                    color: preset.color,
+                    backgroundColor: "rgba(15, 23, 42, 0.4)",
+                  }}
                 >
                   {preset.label}
                 </span>
@@ -194,13 +198,16 @@ export const Work: React.FC<WorkProps> = ({ work = [], bgColor }) => {
                 </h3>
 
                 {/* Custom separator line matches technical color swatch */}
-                <div 
-                  className="h-[2px] w-10 my-3.5 transition-transform duration-500 scale-x-50 group-hover:scale-x-100" 
+                <div
+                  className="h-[2px] w-10 my-3.5 transition-transform duration-500 scale-x-50 group-hover:scale-x-100"
                   style={{ backgroundColor: preset.color }}
                 />
 
                 <p className="text-xs font-normal text-gray-200 max-w-full line-clamp-2 px-2 leading-relaxed drop-shadow-sm">
-                  Ứng dụng: <span className="font-semibold text-white">{item.application}</span>
+                  Ứng dụng:{" "}
+                  <span className="font-semibold text-white">
+                    {item.application}
+                  </span>
                 </p>
 
                 {/* Subtly placed decorative dots matrix */}
@@ -273,7 +280,7 @@ export const Work: React.FC<WorkProps> = ({ work = [], bgColor }) => {
               />
 
               {/* Title Overlay Info card at the bottom */}
-              <div 
+              <div
                 className="mt-6 text-center text-white bg-white/5 border border-white/10 backdrop-blur px-8 py-3.5 rounded-2xl max-w-md"
                 onClick={(e) => e.stopPropagation()}
               >
@@ -291,7 +298,6 @@ export const Work: React.FC<WorkProps> = ({ work = [], bgColor }) => {
           </motion.div>
         )}
       </AnimatePresence>
-
     </section>
   );
 };
