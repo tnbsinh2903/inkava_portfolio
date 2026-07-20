@@ -329,7 +329,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
         // Direct URL entry mode
         <div className="space-y-3">
           <div className="flex gap-2">
-            <div className="relative flex-grow">
+            <div className="relative grow">
               <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-400 pointer-events-none">
                 <Link size={14} />
               </span>

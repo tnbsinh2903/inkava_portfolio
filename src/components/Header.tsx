@@ -58,13 +58,13 @@ export const Header: React.FC<HeaderProps> = ({ logo, onNavigateToAdmin }) => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled
           ? "bg-slate-950/45 backdrop-blur-[3px] shadow-lg shadow-black/30 border-b border-zinc-800/30 py-3.5"
-          : "bg-gradient-to-b from-black/60 via-black/25 to-transparent py-5"
+          : "bg-linear-to-b from-black/60 via-black/25 to-transparent py-5"
       }`}
     >
       <div className="max-w-full mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-14">
           {/* Logo Area */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="shrink-0 flex items-center">
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, "#home")}
@@ -79,8 +79,8 @@ export const Header: React.FC<HeaderProps> = ({ logo, onNavigateToAdmin }) => {
                 />
               ) : (
                 <span className="text-xl font-black tracking-[0.2em] uppercase font-display transition-colors duration-300 text-white">
-                  {logo.text || "INKAVA"}
-                  <span className="text-amber-500 font-serif">.</span>
+                  {logo.text || "INKAVAs"}
+                  {/* <span className="text-amber-500 font-serif">.</span> */}
                 </span>
               )}
             </a>
@@ -107,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({ logo, onNavigateToAdmin }) => {
               ))}
             </div>
 
-            <div className="h-4 w-[1px] bg-white/10 self-center" />
+            <div className="h-4 w-px bg-white/10 self-center" />
 
             <div className="flex items-center gap-3">
               {/* CMS Admin Portal */}

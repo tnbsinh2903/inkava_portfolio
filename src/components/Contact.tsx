@@ -180,7 +180,7 @@ export const Contact: React.FC<ContactProps> = ({ settings, bgColor }) => {
                       Giờ đón khách tư vấn
                     </h4> */}
                     <p className="text-sm text-slate-200 mt-1.5 font-light">
-                      08:00 - 18:00 (Hỗ trợ Hotline & Sản xuất 24/7)
+                      08:00 - 16:45 ( Monday - Saturday )
                     </p>
                   </div>
                 </div>
@@ -302,9 +302,9 @@ export const Contact: React.FC<ContactProps> = ({ settings, bgColor }) => {
             </div>
 
             {/* Slogan */}
-            <div className="pt-3 border-t border-white/5 mt-4 relative z-10 text-[10px] text-slate-500 font-mono tracking-wider uppercase">
+            {/* <div className="pt-3 border-t border-white/5 mt-4 relative z-10 text-[10px] text-slate-500 font-mono tracking-wider uppercase">
               {settings.slogan}
-            </div>
+            </div> */}
           </div>
 
           {/* Form Side (Right) */}

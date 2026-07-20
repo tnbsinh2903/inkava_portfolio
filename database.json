@@ -2,28 +2,28 @@
   "logo": {
     "type": "text",
     "text": "INKAVA",
-    "image": ""
+    "image": "/uploads/generated-image-july-20--2026---10-00am-1784516450206.png"
   },
   "settings": {
     "companyName": "Nhà Máy In Ấn & Bao Bì Hộp Giấy Cao Cấp In Kava",
     "slogan": "Kiệt Tác Bao Bì - Nâng Tầm Thương Hiệu",
-    "address": "Văn phòng & Nhà xưởng: 235/4 Lê Văn Thọ, Phường 9, Gò Vấp, TP. Hồ Chí Minh",
-    "email": "kinhdoanh@inkava.vn",
-    "hotline": "0963.224.084",
-    "facebook": "https://facebook.com/inkava.vn",
+    "address": "No. 1, Street No. 2,  An Hoa Industrial Park,  Huong An Ward, Hue City,  Vietnam",
+    "email": "info@inkava.vn",
+    "hotline": "0234-3548-488",
+    "facebook": "https://www.facebook.com/inkavavn",
     "youtube": "https://youtube.com/inkava",
     "tiktok": "https://tiktok.com/@inkava",
     "zalo": "https://zalo.me/0963224084",
     "instagram": "https://instagram.com/inkava",
     "linkedin": "https://linkedin.com/company/inkava",
     "showFacebook": true,
-    "showYoutube": true,
+    "showYoutube": false,
     "showTiktok": true,
-    "showZalo": true,
+    "showZalo": false,
     "showInstagram": true,
     "showLinkedin": false,
-    "googleMaps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.925055375495!2d106.6563143!3d10.8166702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175291b5b5fcb9d%3A0xc3f58a36fa5b66d!2zR8STIFbhuqVwLCBIb8G6gCBOaMahbg!5e0!3m2!1svi!2s!4v1626400000000!5m2!1svi!2s",
-    "footer": "© 2026 Công Ty TNHH In Kava Việt Nam. Bảo lưu mọi quyền.",
+    "googleMaps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d632.6745328971372!2d107.54663491848683!3d16.487469126149982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a74874da53d1%3A0x817fc7211ceb09c0!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gSU5LQVZB!5e1!3m2!1svi!2s!4v1784515221193!5m2!1svi!2s",
+    "footer": "© 2026 Inkava",
     "seo": {
       "title": "In Kava - Nhà Máy Sản Xuất Bao Bì & Hộp Giấy Cứng Cao Cấp",
       "description": "In Kava chuyên sản xuất hộp cứng cao cấp, hộp quà tặng luxury, túi giấy, bao bì offset tinh xảo với tiến độ vượt trội và công nghệ in G7 hiện đại.",
@@ -483,15 +483,34 @@
       "department": "Thiết Kế Mỹ Thuật",
       "position": "Creative Director",
       "order": 3
+    },
+    {
+      "id": "tm_1784514560923",
+      "avatar": "/uploads/monkey-d.-luffy-poster-lab-1784514554113.png",
+      "fullName": "Nobis enim et quae t",
+      "email": "wakesy@mailinator.com",
+      "department": "Ban lãnh đạo",
+      "position": "Voluptatibus autem a",
+      "order": 4
+    },
+    {
+      "id": "tm_1784514617045",
+      "avatar": "/uploads/hinh-nen-vo-tri-04-1784514615341.jpg",
+      "fullName": "A et officia vero om",
+      "email": "lurod@mailinator.com",
+      "department": "Sản xuất & Vận hành",
+      "position": "Et aut aliquip dolor",
+      "order": 5
     }
   ],
   "work": [
     {
       "id": "w1",
-      "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80",
-      "customerName": "Toyota Việt Nam",
-      "application": "Hộp phụ tùng & Sổ hướng dẫn",
-      "order": 1
+      "image": "/uploads/81773f-c0d7ffe6f6cb4804a5e49618d112fd35-mv2-1784515784678.png",
+      "customerName": "Rubber",
+      "application": "Swimwear",
+      "order": 1,
+      "stylePreset": "split_fountain"
     },
     {
       "id": "w2",
@@ -502,9 +521,9 @@
     },
     {
       "id": "w3",
-      "image": "/uploads/generated-image-july-03--2026---8-58am-1784273911751.jpg",
-      "customerName": "Samsung Vina",
-      "application": "Hộp điện thoại Galaxy cao cấp",
+      "image": "/uploads/81773f-f3abd32538bc4c7aa2ba0bd78917cc87-mv2-1784516028006.jpg",
+      "customerName": "waterbased",
+      "application": "Children wear  No Phthalates",
       "order": 2,
       "stylePreset": "default"
     },

@@ -178,7 +178,7 @@ export const Work: React.FC<WorkProps> = ({ work = [], bgColor }) => {
               {/* 2. Seamless Centered Glassmorphism Overlay - Reveals on Hover with light tint to keep the photo clearly visible */}
               <div className="absolute inset-0 w-full h-full bg-slate-950/45 backdrop-blur-[3px] opacity-0 group-hover:opacity-100 transition-all duration-400 ease-in-out z-10 flex flex-col items-center justify-center text-center p-6 text-white">
                 {/* Styled Technical Badge Tag */}
-                <span
+                {/* <span
                   className="text-[9px] font-black uppercase tracking-[0.25em] px-3 py-1 rounded-full border mb-4 shadow-sm backdrop-blur-sm"
                   style={{
                     borderColor: preset.color,
@@ -187,11 +187,11 @@ export const Work: React.FC<WorkProps> = ({ work = [], bgColor }) => {
                   }}
                 >
                   {preset.label}
-                </span>
+                </span> */}
 
-                <span className="text-[9px] font-black uppercase tracking-[0.25em] text-gray-300 drop-shadow-sm">
+                {/* <span className="text-[9px] font-black uppercase tracking-[0.25em] text-gray-300 drop-shadow-sm">
                   CLIENT ARCHIVE
-                </span>
+                </span> */}
 
                 <h3 className="text-lg sm:text-xl font-black uppercase tracking-tight leading-tight mt-1.5 max-w-full line-clamp-2 px-2 drop-shadow-md">
                   {item.customerName}
@@ -204,7 +204,7 @@ export const Work: React.FC<WorkProps> = ({ work = [], bgColor }) => {
                 />
 
                 <p className="text-xs font-normal text-gray-200 max-w-full line-clamp-2 px-2 leading-relaxed drop-shadow-sm">
-                  Ứng dụng:{" "}
+                  {/* Ứng dụng:{" "} */}
                   <span className="font-semibold text-white">
                     {item.application}
                   </span>
@@ -288,11 +288,11 @@ export const Work: React.FC<WorkProps> = ({ work = [], bgColor }) => {
                   {work[activeItemIdx].customerName}
                 </h4>
                 <p className="text-xs text-slate-300 font-light mt-1">
-                  Ứng dụng: {work[activeItemIdx].application}
+                  {work[activeItemIdx].application}
                 </p>
-                <div className="text-[10px] font-mono text-slate-400 mt-2">
+                {/* <div className="text-[10px] font-mono text-slate-400 mt-2">
                   Hạng mục {activeItemIdx + 1} / {work.length}
-                </div>
+                </div> */}
               </div>
             </div>
           </motion.div>
