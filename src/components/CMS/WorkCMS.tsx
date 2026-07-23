@@ -199,7 +199,7 @@ export const WorkCMS: React.FC<WorkCMSProps> = ({ token, refreshData }) => {
                 <label className="block text-[10px] font-black uppercase tracking-wider text-gray-400">Ứng dụng sản phẩm / Mô tả ngắn *</label>
                 <input
                   type="text"
-                  required
+                   
                   value={formData.application}
                   onChange={(e) => setFormData({ ...formData, application: e.target.value })}
                   placeholder="Ví dụ: Hộp quà tết cao cấp, Túi giấy Kraft tái chế..."

@@ -16,9 +16,7 @@ import { AdminDashboard } from "./components/CMS/AdminDashboard";
 
 export default function App() {
   const [isAdminMode, setIsAdminMode] = useState(false);
-  const [authToken, setAuthToken] = useState<string | null>(
-    localStorage.getItem("cms_auth_token"),
-  );
+  const [authToken, setAuthToken] = useState<string | null>(localStorage.getItem("cms_auth_token"));
   const [appData, setAppData] = useState<AppData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -47,12 +45,10 @@ export default function App() {
       if (response.ok) {
         const data = await response.json();
         setAppData(data);
-
+        
         // Update document metadata dynamically for SEO configuration
         if (data.settings && data.settings.seo) {
-          document.title =
-            data.settings.seo.title ||
-            "In Kava - Nhà Máy In & Bao Bì Cao Cấp G7";
+          document.title = data.settings.seo.title || "In Kava - Nhà Máy In & Bao Bì Cao Cấp G7";
           const metaDesc = document.querySelector('meta[name="description"]');
           if (metaDesc) {
             metaDesc.setAttribute("content", data.settings.seo.description);
@@ -61,6 +57,19 @@ export default function App() {
             meta.name = "description";
             meta.content = data.settings.seo.description;
             document.head.appendChild(meta);
+          }
+
+          // Dynamic Favicon update
+          if (data.settings.seo.favicon) {
+            const faviconLink = document.querySelector("link[rel*='icon']");
+            if (faviconLink) {
+              faviconLink.setAttribute("href", data.settings.seo.favicon);
+            } else {
+              const link = document.createElement("link");
+              link.rel = "icon";
+              link.href = data.settings.seo.favicon;
+              document.head.appendChild(link);
+            }
           }
         }
       }
@@ -105,20 +114,14 @@ export default function App() {
       <div className="min-h-screen bg-slate-900 flex items-center justify-center text-white">
         <div className="text-center space-y-4">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-amber-500 mx-auto" />
-          <p className="text-sm font-semibold tracking-wider text-gray-400 uppercase animate-pulse">
-            InKava.vn
-          </p>
+          <p className="text-sm font-semibold tracking-wider text-gray-400 uppercase animate-pulse">InKava.vn</p>
         </div>
       </div>
     );
   }
 
   // Fallback structures if fetch failed
-  const safeLogo: LogoConfig = appData?.logo || {
-    type: "text",
-    text: "IN KAVA",
-    image: "",
-  };
+  const safeLogo: LogoConfig = appData?.logo || { type: "text", text: "IN KAVA", image: "" };
   const safeSettings: SettingsConfig = appData?.settings || {
     companyName: "Nhà Máy In Kava",
     slogan: "Tinh Hoa In Ấn - Nâng Tầm Thương Hiệu",
@@ -130,19 +133,18 @@ export default function App() {
     tiktok: "",
     googleMaps: "",
     footer: "© 2026 In Kava.",
-    seo: {
-      title: "In Kava",
-      description: "Nhà máy sản xuất hộp cứng & túi giấy cao cấp",
-      keywords: "",
-      ogImage: "",
-      favicon: "",
-    },
+    seo: { title: "In Kava", description: "Nhà máy sản xuất hộp cứng & túi giấy cao cấp", keywords: "", ogImage: "", favicon: "" }
   };
 
   // RENDER ADMIN CMS VIEW
   if (isAdminMode) {
     if (authToken) {
-      return <AdminDashboard token={authToken} onLogout={handleLogout} />;
+      return (
+        <AdminDashboard
+          token={authToken}
+          onLogout={handleLogout}
+        />
+      );
     } else {
       return (
         <AdminLogin
@@ -166,35 +168,15 @@ export default function App() {
       <Services services={appData?.services || []} />
 
       {/* About Biography Section */}
-      <About
-        about={
-          appData?.aboutFactory || {
-            title: "Về chúng tôi",
-            description: "",
-            images: [],
-            imageRotationInterval: 5,
-            stats: {
-              foundationYear: 2012,
-              area: 8500,
-              employees: 250,
-              capacity: 15,
-            },
-          }
-        }
-        bgColor={appData?.sectionBgColors?.aboutFactory}
+      <About 
+        about={appData?.aboutFactory || { title: "Về chúng tôi", description: "", images: [], imageRotationInterval: 5, stats: { foundationYear: 2012, area: 8500, employees: 250, capacity: 15 } }} 
+        bgColor={appData?.sectionBgColors?.aboutFactory} 
       />
 
       {/* About Us Corporate Video Section */}
-      <AboutUs
-        aboutUs={
-          appData?.aboutUs || {
-            title: "Tầm nhìn & Sứ mệnh",
-            description:
-              "In Kava kiến tạo những giải pháp đóng gói chuyên nghiệp...",
-            videoUrl: "",
-          }
-        }
-        bgColor={appData?.sectionBgColors?.aboutUs}
+      <AboutUs 
+        aboutUs={appData?.aboutUs || { title: "Tầm nhìn & Sứ mệnh", description: "In Kava kiến tạo những giải pháp đóng gói chuyên nghiệp...", videoUrl: "" }} 
+        bgColor={appData?.sectionBgColors?.aboutUs} 
       />
 
       {/* Brand Logos Scrolling Ticker Section */}
@@ -204,20 +186,20 @@ export default function App() {
       <Gallery items={appData?.gallery || []} />
 
       {/* Work Portfolio Masonry Section */}
-      <Work
-        work={appData?.work || []}
-        bgColor={appData?.sectionBgColors?.work}
+      <Work 
+        work={appData?.work || []} 
+        bgColor={appData?.sectionBgColors?.work} 
       />
 
       {/* Our Team Infinite Scrolling Section */}
-      <OurTeam
-        team={appData?.team || []}
-        bgColor={appData?.sectionBgColors?.team}
+      <OurTeam 
+        team={appData?.team || []} 
+        bgColor={appData?.sectionBgColors?.team} 
       />
 
       {/* Contact Form & Coordinates Map Section */}
-      <Contact
-        settings={safeSettings}
+      <Contact 
+        settings={safeSettings} 
         bgColor={appData?.sectionBgColors?.contact}
       />
 

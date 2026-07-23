@@ -107,10 +107,10 @@ export const Header: React.FC<HeaderProps> = ({ logo, onNavigateToAdmin }) => {
               ))}
             </div>
 
-            <div className="h-4 w-px bg-white/10 self-center" />
+            {/* <div className="h-4 w-px bg-white/10 self-center" /> */}
 
-            <div className="flex items-center gap-3">
               {/* CMS Admin Portal */}
+            {/* <div className="flex items-center gap-3">
               <button
                 id="cms-login-btn"
                 onClick={onNavigateToAdmin}
@@ -123,12 +123,12 @@ export const Header: React.FC<HeaderProps> = ({ logo, onNavigateToAdmin }) => {
               >
                 <Settings size={15} />
               </button>
-            </div>
+            </div> */}
           </nav>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center gap-2">
-            <button
+            {/* <button
               onClick={onNavigateToAdmin}
               className={`p-2 rounded-full border transition-colors ${
                 isScrolled
@@ -138,7 +138,7 @@ export const Header: React.FC<HeaderProps> = ({ logo, onNavigateToAdmin }) => {
               title="CMS Admin"
             >
               <Settings size={16} />
-            </button>
+            </button> */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-xl transition-colors text-white hover:bg-white/10"
@@ -166,7 +166,7 @@ export const Header: React.FC<HeaderProps> = ({ logo, onNavigateToAdmin }) => {
                 {item.label}
               </a>
             ))}
-            <div className="pt-5 px-3 flex flex-col gap-3">
+            {/* <div className="pt-5 px-3 flex flex-col gap-3">
               <button
                 onClick={onNavigateToAdmin}
                 className="w-full flex items-center justify-center gap-1.5 px-4 py-3 bg-white/5 text-slate-300 rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-white/10 border border-white/10 transition-all"
@@ -174,7 +174,7 @@ export const Header: React.FC<HeaderProps> = ({ logo, onNavigateToAdmin }) => {
                 <Settings size={14} />
                 Quản trị CMS (Đăng nhập)
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       )}

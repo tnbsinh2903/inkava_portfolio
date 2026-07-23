@@ -80,7 +80,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess, onBackTo
               required
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="Nhập tên đăng nhập (mặc định: admin)"
+              placeholder="Nhập tên đăng nhập "
               className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all"
             />
           </div>
@@ -94,7 +94,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess, onBackTo
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Nhập mật khẩu (mặc định: admin123)"
+                placeholder="Nhập mật khẩu"
                 className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white pr-10 transition-all"
               />
               <button
@@ -108,11 +108,11 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess, onBackTo
           </div>
 
           {/* Credentials guideline */}
-          <div className="bg-amber-500/5 border border-amber-500/10 p-3 rounded-xl text-[11px] text-amber-700 leading-normal font-sans">
+          {/* <div className="bg-amber-500/5 border border-amber-500/10 p-3 rounded-xl text-[11px] text-amber-700 leading-normal font-sans">
             <p className="font-semibold uppercase tracking-wider">Tài khoản demo:</p>
             <p className="mt-1">Tên đăng nhập: <strong className="font-bold">admin</strong></p>
             <p>Mật khẩu: <strong className="font-bold">admin123</strong></p>
-          </div>
+          </div> */}
 
           {/* Actions button */}
           <div className="space-y-3 pt-2">

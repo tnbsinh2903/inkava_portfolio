@@ -503,7 +503,7 @@ export const Contact: React.FC<ContactProps> = ({ settings, bgColor }) => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 rounded-3xl overflow-hidden shadow-lg border border-gray-100 h-96 bg-gray-100"
+            className="mt-8 rounded overflow-hidden shadow-lg border border-gray-100 h-96 bg-gray-100"
           >
             <iframe
               src={settings.googleMaps}

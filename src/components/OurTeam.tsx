@@ -45,11 +45,11 @@ export const OurTeam: React.FC<OurTeamProps> = ({ team = [], bgColor }) => {
 
           {/* Marquee Track - scrolls from left to right w-[200%] md:w-[150%] xl:w-[120%]  animate-[marquee-ltr_10s_linear_infinite] \ animate-marquee-ltr */}
           <div className="   ">
-            <div className="   shrink-0 min-w-full flex justify-center flex-wrap gap-2  cursor-pointer py-2">
+            <div className=" p-1 grid grid-cols-2  shrink-0 min-w-full md:flex md:justify-center md:flex-wrap gap-2  cursor-pointer  ">
               {marqueeItems.map((member, idx) => (
                 <div
                   key={`${member.id}-${idx}`}
-                  className="  w-1/5 bg-white rounded-2xl p-6 border border-slate-200/40 shadow-sm hover:shadow-md hover:border-amber-500/20 transition-all duration-300 flex flex-col items-center text-center group shrink-0 relative overflow-hidden"
+                  className="  md:w-1/5 bg-white rounded-2xl p-6 border border-slate-200/40 shadow-sm hover:shadow-md hover:border-amber-500/20 transition-all duration-300 flex flex-col items-center text-center group shrink-0 relative overflow-hidden"
                 >
                   {/* Subtle top background highlight */}
                   <div className="absolute top-0 left-0 right-0 h-2 bg-linear-to-r from-amber-500 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

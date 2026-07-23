@@ -469,6 +469,13 @@ export const SettingsCMS: React.FC<SettingsCMSProps> = ({ settings, logo, token,
                 label="Ảnh Open Graph (Chia sẻ lên Facebook/Zalo) *"
                 token={token}
               />
+
+              <ImageUpload
+                value={settingsConfig.seo.favicon || ""}
+                onChange={(url) => handleSeoChange("favicon", url)}
+                label="Favicon (Biểu tượng thanh địa chỉ trình duyệt, khuyên dùng file hình vuông .ico hoặc .png) *"
+                token={token}
+              />
             </div>
           )}
 

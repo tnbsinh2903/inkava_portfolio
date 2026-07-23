@@ -7,7 +7,7 @@
   "settings": {
     "companyName": "Nhà Máy In Ấn & Bao Bì Hộp Giấy Cao Cấp In Kava",
     "slogan": "Kiệt Tác Bao Bì - Nâng Tầm Thương Hiệu",
-    "address": "No. 1, Street No. 2,  An Hoa Industrial Park,  Huong An Ward, Hue City,  Vietnam",
+    "address": "No. 1, Street No. 2,  An Hoa Industrial Park,  Huong An Ward, Hue City,  Vietnam.",
     "email": "info@inkava.vn",
     "hotline": "0234-3548-488",
     "facebook": "https://www.facebook.com/inkavavn",
@@ -25,11 +25,11 @@
     "googleMaps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d632.6745328971372!2d107.54663491848683!3d16.487469126149982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a74874da53d1%3A0x817fc7211ceb09c0!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gSU5LQVZB!5e1!3m2!1svi!2s!4v1784515221193!5m2!1svi!2s",
     "footer": "© 2026 Inkava",
     "seo": {
-      "title": "In Kava - Nhà Máy Sản Xuất Bao Bì & Hộp Giấy Cứng Cao Cấp",
+      "title": "Inkava",
       "description": "In Kava chuyên sản xuất hộp cứng cao cấp, hộp quà tặng luxury, túi giấy, bao bì offset tinh xảo với tiến độ vượt trội và công nghệ in G7 hiện đại.",
       "keywords": "in kava, inkava, in hộp cứng cao cấp, in hộp giấy, in túi giấy, xưởng in hộp quà tặng",
       "ogImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
-      "favicon": ""
+      "favicon": "/uploads/check-1784527736323.png"
     }
   },
   "banners": [
@@ -168,203 +168,203 @@
     {
       "id": "br1",
       "name": "Nike",
-      "logo": "preset:nike",
+      "logo": "/uploads/1c414539756a2dccd77ec22cf373bb8b-1784606904234.png",
       "isVisible": true,
       "order": 1
     },
     {
       "id": "br2",
       "name": "Jordan",
-      "logo": "preset:jordan",
+      "logo": "/uploads/air-jordan-seeklogo-removebg-preview-1784606861474.png",
       "isVisible": true,
       "order": 2
     },
     {
       "id": "br3",
       "name": "Lacoste",
-      "logo": "preset:lacoste",
+      "logo": "/uploads/lacoste-seeklogo-1784607124782.png",
       "isVisible": true,
       "order": 3
     },
     {
       "id": "br4",
       "name": "Puma",
-      "logo": "preset:puma",
+      "logo": "/uploads/puma-seeklogo-1784607232880.png",
       "isVisible": true,
       "order": 4
     },
     {
       "id": "br5",
       "name": "Victoria's Secret",
-      "logo": "preset:vs",
+      "logo": "/uploads/victoria-secret-seeklogo-1784607372962.png",
       "isVisible": true,
       "order": 5
     },
     {
       "id": "br6",
       "name": "Emporio Armani EA7",
-      "logo": "preset:ea7",
+      "logo": "/uploads/emporio-armani-seeklogo-1784607620323.png",
       "isVisible": true,
       "order": 6
     },
     {
       "id": "br7",
       "name": "Guess",
-      "logo": "preset:guess",
+      "logo": "/uploads/guess-seeklogo-1784608045270.png",
       "isVisible": true,
       "order": 7
     },
     {
       "id": "br8",
       "name": "Arena",
-      "logo": "preset:arena",
+      "logo": "/uploads/arena-seeklogo-1784608111599.png",
       "isVisible": true,
       "order": 8
     },
     {
       "id": "br9",
       "name": "Oakley",
-      "logo": "preset:oakley",
+      "logo": "/uploads/oakley-seeklogo-1784608320778.png",
       "isVisible": true,
       "order": 9
     },
     {
       "id": "br10",
       "name": "Champion",
-      "logo": "preset:champion",
+      "logo": "/uploads/champion-seeklogo-1784608383028.png",
       "isVisible": true,
       "order": 10
     },
     {
       "id": "br11",
       "name": "Wed'ze",
-      "logo": "preset:wedze",
+      "logo": "/uploads/pngfind.com-balista-png-4334755-1784608649309.png",
       "isVisible": true,
       "order": 11
     },
     {
       "id": "br12",
       "name": "Fila",
-      "logo": "preset:fila",
+      "logo": "/uploads/fila-seeklogo-1784608808284.png",
       "isVisible": true,
       "order": 12
     },
     {
       "id": "br13",
       "name": "Columbia",
-      "logo": "preset:columbia",
+      "logo": "/uploads/columbia-seeklogo-1784608956084.png",
       "isVisible": true,
       "order": 13
     },
     {
       "id": "br14",
       "name": "Petit Bateau",
-      "logo": "preset:petitbateau",
+      "logo": "/uploads/petit-bateau-logo--1--removebg-preview-1784610038450.png",
       "isVisible": true,
       "order": 14
     },
     {
       "id": "br15",
       "name": "Hurley",
-      "logo": "preset:hurley",
+      "logo": "/uploads/hurley-seeklogo-1784612844629.png",
       "isVisible": true,
       "order": 15
     },
     {
       "id": "br16",
       "name": "Quechua",
-      "logo": "preset:quechua",
+      "logo": "/uploads/quechua-seeklogo-1784612942950.png",
       "isVisible": true,
       "order": 16
     },
     {
       "id": "br17",
       "name": "Olaian",
-      "logo": "preset:olaian",
+      "logo": "/uploads/generated-image-july-22--2026---2-18pm-removebg-preview-1784704742566.png",
       "isVisible": true,
       "order": 17
     },
     {
       "id": "br18",
       "name": "Nabaiji",
-      "logo": "preset:nabaiji",
+      "logo": "/uploads/nabaiji-seeklogo-1784706615437.png",
       "isVisible": true,
       "order": 18
     },
     {
       "id": "br19",
       "name": "Converse",
-      "logo": "preset:converse",
+      "logo": "/uploads/converse-2017-seeklogo-1784706717004.png",
       "isVisible": true,
       "order": 19
     },
     {
       "id": "br20",
       "name": "Levi's",
-      "logo": "preset:levis",
+      "logo": "/uploads/levi-s-idzgu4nnlv-1-1784706900571.png",
       "isVisible": true,
       "order": 20
     },
     {
       "id": "br21",
       "name": "Kalenji",
-      "logo": "preset:kalenji",
+      "logo": "/uploads/kalenji---wikip-dia-removebg-preview-1784707435091.png",
       "isVisible": true,
       "order": 21
     },
     {
       "id": "br22",
       "name": "Domyos",
-      "logo": "preset:domyos",
+      "logo": "/uploads/domyos-seeklogo-1784711172627.png",
       "isVisible": true,
       "order": 22
     },
     {
       "id": "br23",
       "name": "HBi",
-      "logo": "preset:hbi",
+      "logo": "/uploads/e90760-65a187e6210841a880545e39bb99ca12-mv2-1784712979641.png",
       "isVisible": true,
       "order": 23
     },
     {
       "id": "br24",
       "name": "Well",
-      "logo": "preset:well",
+      "logo": "/uploads/generated-image-july-22--2026---4-42pm-removebg-preview-1784713424545.png",
       "isVisible": true,
       "order": 24
     },
     {
       "id": "br25",
       "name": "DIM",
-      "logo": "preset:dim",
+      "logo": "/uploads/idki7w-tip-logos-removebg-preview-1784711668856.png",
       "isVisible": true,
       "order": 25
     },
     {
       "id": "br26",
       "name": "Camaïeu",
-      "logo": "preset:camaieu",
+      "logo": "/uploads/camaieu-seeklogo-1784711829372.png",
       "isVisible": true,
       "order": 26
     },
     {
       "id": "br27",
       "name": "Adore Me",
-      "logo": "preset:adoreme",
+      "logo": "/uploads/adore-me-seeklogo-1784712308333.png",
       "isVisible": true,
       "order": 27
     },
     {
       "id": "br28",
       "name": "Carrefour",
-      "logo": "preset:carrefour",
+      "logo": "/uploads/carrefour-seeklogo-1784712411097.png",
       "isVisible": true,
       "order": 28
     },
     {
       "id": "br29",
       "name": "Walmart",
-      "logo": "preset:walmart",
+      "logo": "/uploads/walmart-seeklogo-1784712588069.png",
       "isVisible": true,
       "order": 29
     },
@@ -409,6 +409,17 @@
     }
   ],
   "contacts": [
+    {
+      "id": "c_1784535924844",
+      "fullName": "anhkhome",
+      "phone": "0978654321",
+      "email": "anhkhome2332@gmail.com",
+      "company": "de",
+      "address": "deq",
+      "message": "hin",
+      "createdAt": "2026-07-20T08:25:24.844Z",
+      "isProcessed": false
+    },
     {
       "id": "c_1",
       "fullName": "Nguyễn Văn Hùng",
@@ -492,15 +503,6 @@
       "department": "Ban lãnh đạo",
       "position": "Voluptatibus autem a",
       "order": 4
-    },
-    {
-      "id": "tm_1784514617045",
-      "avatar": "/uploads/hinh-nen-vo-tri-04-1784514615341.jpg",
-      "fullName": "A et officia vero om",
-      "email": "lurod@mailinator.com",
-      "department": "Sản xuất & Vận hành",
-      "position": "Et aut aliquip dolor",
-      "order": 5
     }
   ],
   "work": [
@@ -514,10 +516,11 @@
     },
     {
       "id": "w2",
-      "image": "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=600&q=80",
+      "image": "/uploads/81773f-78d7bb87c4124a4c83b670c5ec91df39-mv2-1784713742095.jpg",
       "customerName": "Vinamilk",
-      "application": "Hộp quà tặng sữa bột cao cấp",
-      "order": 4
+      "application": "",
+      "order": 4,
+      "stylePreset": "default"
     },
     {
       "id": "w3",
@@ -529,18 +532,11 @@
     },
     {
       "id": "w4",
-      "image": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=600&q=80",
+      "image": "/uploads/e90760-32f554402a034787adb4e69779b4daa1-mv2-1784713496686.png",
       "customerName": "Nestlé Việt Nam",
-      "application": "Bao bì hộp bánh Tết sang trọng",
-      "order": 3
-    },
-    {
-      "id": "w_1784273900930",
-      "image": "/uploads/hinh-nen-vo-tri-04-1784273894721.jpg",
-      "customerName": "qwqqw",
-      "application": "dqweqeq",
-      "stylePreset": "default",
-      "order": 5
+      "application": "Chirld",
+      "order": 3,
+      "stylePreset": "default"
     },
     {
       "id": "w_1784273934610",
@@ -555,7 +551,7 @@
     "aboutFactory": "#ffffff",
     "aboutUs": "#f8fafc",
     "work": "#ffffff",
-    "team": "#f8fafc",
+    "team": "#688aac",
     "contact": "#f3e7e7"
   }
 }

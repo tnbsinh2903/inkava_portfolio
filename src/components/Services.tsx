@@ -445,7 +445,7 @@ export const Services: React.FC<ServicesProps> = ({ services }) => {
       {activeImage && (
         <div className="fixed inset-0 z-50 bg-slate-950/95 flex flex-col items-center justify-between p-4 backdrop-blur-sm">
           {/* Header */}
-          <div className="w-full flex items-center justify-between max-w-5xl border-b border-white/10 pb-4 text-white">
+          <div className="w-full flex-wrap gap-2 flex items-center justify-between max-w-5xl border-b border-white/10 pb-4 text-white">
             <div className="flex items-center gap-2.5">
               <span className="h-2 w-2 rounded-full bg-amber-500 animate-pulse" />
               <h4 className="text-sm font-bold uppercase tracking-wider">
