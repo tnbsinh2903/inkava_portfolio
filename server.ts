@@ -1,7 +1,10 @@
+import dotenv from "dotenv";
 import express from "express";
 import path from "path";
 import fs from "fs";
+import nodemailer from "nodemailer";
 import { createServer as createViteServer } from "vite";
+dotenv.config();
 
 const PORT = 3000;
 const DB_FILE = path.join(process.cwd(), "database.json");
@@ -14,6 +17,10 @@ if (!fs.existsSync(UPLOADS_DIR)) {
 
 // Default Data
 const DEFAULT_DATA = {
+  adminCredentials: {
+    username: "admin",
+    password: "admin123"
+  },
   logo: {
     type: "text", // "text" | "image"
     text: "SMARTPRINT",
@@ -23,7 +30,7 @@ const DEFAULT_DATA = {
     companyName: "Nhà Máy In Công Nghệ Cao SmartPrint",
     slogan: "Chất lượng vượt trội - Công nghệ đi đầu",
     address: "Lô 18, Đường số 3, Khu Công Nghiệp Sài Đồng B, Long Biên, Hà Nội",
-    email: "info@smartprint.com.vn",
+    email: "info@inkava.vn",
     hotline: "1900 888 999",
     facebook: "https://facebook.com/smartprint.vietnam",
     youtube: "https://youtube.com/smartprint",
@@ -311,6 +318,21 @@ function readDB() {
         modified = true;
       }
 
+      // Migration for adminCredentials
+      if (!parsed.adminCredentials) {
+        parsed.adminCredentials = {
+          username: "admin",
+          password: "admin123"
+        };
+        modified = true;
+      }
+
+      // Migration for settings.email if old placeholder
+      if (parsed.settings && (parsed.settings.email === "info@smartprint.com.vn" || !parsed.settings.email)) {
+        parsed.settings.email = "info@inkava.vn";
+        modified = true;
+      }
+
       if (modified) {
         fs.writeFileSync(DB_FILE, JSON.stringify(parsed, null, 2), "utf-8");
       }
@@ -344,16 +366,50 @@ async function startServer() {
   // Simple hardcoded session store
   let loggedInUser: { username: string } | null = null;
 
+  const authMiddleware = (req: any, res: any, next: any) => {
+    // In our simplified preview setup, we authorize standard calls if our session is active
+    // We can also check authorization header for the mock JWT token
+    const authHeader = req.headers.authorization;
+    if (loggedInUser || authHeader === "Bearer mock_jwt_token_for_cms") {
+      return next();
+    }
+    return res.status(401).json({ error: "Unauthorized access to Admin CMS." });
+  };
+
   // --- API ROUTES ---
 
   // Auth Endpoints
   app.post("/api/login", (req, res) => {
     const { username, password } = req.body;
-    if (username === "admin" && password === "admin123") {
+    const db = readDB();
+    const creds = db.adminCredentials || { username: "admin", password: "admin123" };
+    if (username === creds.username && password === creds.password) {
       loggedInUser = { username };
       return res.json({ success: true, user: loggedInUser, token: "mock_jwt_token_for_cms" });
     }
     return res.status(401).json({ error: "Tên đăng nhập hoặc mật khẩu không chính xác." });
+  });
+
+  app.put("/api/admin/change-password", authMiddleware, (req, res) => {
+    const { currentPassword, newPassword } = req.body;
+    if (!currentPassword || !newPassword) {
+      return res.status(400).json({ error: "Vui lòng cung cấp đầy đủ mật khẩu hiện tại và mật khẩu mới." });
+    }
+
+    const db = readDB();
+    const creds = db.adminCredentials || { username: "admin", password: "admin123" };
+
+    if (currentPassword !== creds.password) {
+      return res.status(400).json({ error: "Mật khẩu hiện tại không chính xác." });
+    }
+
+    db.adminCredentials = {
+      username: "admin",
+      password: newPassword
+    };
+    writeDB(db);
+
+    return res.json({ success: true, message: "Đổi mật khẩu đăng nhập thành công!" });
   });
 
   app.post("/api/logout", (req, res) => {
@@ -387,8 +443,93 @@ async function startServer() {
     });
   });
 
+  // Email Notification Helper Function
+  async function sendContactEmailNotification(contact: any, recipientEmail: string) {
+    const smtpHost = process.env.SMTP_HOST;
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS;
+    const smtpPort = parseInt(process.env.SMTP_PORT || "587", 10);
+
+    const targetEmail = recipientEmail || process.env.NOTIFICATION_EMAIL || "info@inkava.vn";
+
+    const emailSubject = `Inkava Website New Contact`;
+    const htmlBody = `
+      <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f9fafb; color: #111827;">
+        <div style="max-width: 600px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 12px; border: 1px solid #e5e7eb;">
+          <h2 style="color: #d97706; margin-top: 0; font-size: 20px; text-transform: uppercase;">Thông Tin Liên Hệ</h2>
+          
+          <table style="width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px;">
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6; font-weight: bold; width: 35%;">Họ và tên :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6;">${contact.fullName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6; font-weight: bold;">Số điện thoại :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6;"><strong>${contact.phone || 'Chưa cung cấp'}</strong></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6; font-weight: bold;">Email :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6;"><a href="mailto:${contact.email}">${contact.email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6; font-weight: bold;">Công ty :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6;">${contact.company || 'Chưa cung cấp'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6; font-weight: bold;">Địa chỉ :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6;">${contact.address || 'Chưa cung cấp'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6; font-weight: bold;">Thời gian gửi :</td>
+              <td style="padding: 10px; border-bottom: 1px solid #f3f4f6;">${new Date(contact.createdAt).toLocaleString('vi-VN')}</td>
+            </tr>
+          </table>
+
+          <div style="margin-top: 20px; padding: 15px; background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 4px;">
+            <p style="margin: 0 0 8px 0; font-weight: bold; color: #92400e;">Nội dung tin nhắn :</p>
+            <p style="margin: 0; color: #78350f; white-space: pre-wrap; font-size: 14px;">${contact.message || 'Khách hàng không nhập lời nhắn thêm.'}</p>
+          </div>
+      </div>
+    `;
+
+    if (smtpHost && smtpUser && smtpPass) {
+      try {
+        const transporter = nodemailer.createTransport({
+          host: smtpHost,
+          port: smtpPort,
+          secure: smtpPort === 465,
+          auth: {
+            user: smtpUser,
+            pass: smtpPass
+          }
+        });
+
+        await transporter.sendMail({
+          from: `"Website Inkava" <${smtpUser}>`,
+          to: targetEmail,
+          bcc: ['sinh.trannguyenbao@inkava.vn'], // Optional: BCC to internal team
+          subject: emailSubject,
+          html: htmlBody
+        });
+        console.log(`[EMAIL] Successfully sent notification email to ${targetEmail}`);
+        return { sent: true };
+      } catch (err) {
+        console.error(`[EMAIL ERROR] Failed to send email via SMTP:`, err);
+        return { sent: false, error: err };
+      }
+    } else {
+      console.log(`[EMAIL NOTICE] Contact saved in CMS. SMTP credentials not configured in env. Target email: ${targetEmail}`, {
+        to: targetEmail,
+        subject: emailSubject,
+        contact
+      });
+      console.log("Check Env:", { smtpHost, smtpUser, smtpPass, smtpPort });
+      return { sent: false, reason: "SMTP not configured" };
+    }
+  }
+
   // Public contact submission
-  app.post("/api/contacts", (req, res) => {
+  app.post("/api/contacts", async (req, res) => {
     const { fullName, phone, email, company, address, message } = req.body;
     if (!fullName || !email) {
       return res.status(400).json({ error: "Họ tên và Địa chỉ Email nhận báo giá là bắt buộc." });
@@ -410,19 +551,16 @@ async function startServer() {
     db.contacts.unshift(newContact);
     writeDB(db);
 
+    // Send email notification to info@inkava.vn (or setting email)
+    const targetEmail = db.settings?.email || "info@inkava.vn";
+    sendContactEmailNotification(newContact, targetEmail).catch((e) => {
+      console.error("[EMAIL BACKGROUND ERROR]", e);
+    });
+
     res.json({ success: true, contact: newContact });
   });
 
   // --- ADMIN CMS ENDPOINTS (Middleware checking if authenticated) ---
-  const authMiddleware = (req: any, res: any, next: any) => {
-    // In our simplified preview setup, we authorize standard calls if our session is active
-    // We can also check authorization header for the mock JWT token
-    const authHeader = req.headers.authorization;
-    if (loggedInUser || authHeader === "Bearer mock_jwt_token_for_cms") {
-      return next();
-    }
-    return res.status(401).json({ error: "Unauthorized access to Admin CMS." });
-  };
 
   // Get full Admin CMS data
   app.get("/api/admin/data", authMiddleware, (req, res) => {
@@ -447,7 +585,7 @@ async function startServer() {
       const mimeType = matches[1];
       const base64Data = matches[2];
       const buffer = Buffer.from(base64Data, "base64");
-      
+
       let extension = "png";
       if (mimeType === "application/pdf") {
         extension = "pdf";
